@@ -82,7 +82,8 @@ static bool parse_pasv_response(const std::string &str, std::string &ip,
 }
 
 static int connect_to_server(const std::string &hostname, int port) {
-    struct addrinfo hints{}, *res;
+    struct addrinfo hints {
+    }, *res;
     hints.ai_family = AF_INET;
     hints.ai_socktype = SOCK_STREAM;
     char port_str[16];
